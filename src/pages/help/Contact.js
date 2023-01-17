@@ -75,6 +75,17 @@ export const Contact = () => {
         contactForm.reset();
     };
 
+    let response
+    if (loading) {
+        response = <p className="loading">waiting for response...</p>
+    }
+    if (formSuccess) {
+        response = <p className="success">Message sent with success</p>
+    }
+    if (formError) {
+        response = <p className="error">Something went wrong.</p>
+    }
+
 
     return (
         <div className="contact">
@@ -116,7 +127,6 @@ export const Contact = () => {
                         onSubmit={contactForm.onSubmit((values) => sendEmail(values))}
                     >
                         <TextInput
-                            style={{ color: '#00ECE5', fontSize: 18, lineHeight: 1.4 }}
                             withAsterisk
                             label="Email"
                             name='user_email'
@@ -141,9 +151,7 @@ export const Contact = () => {
                         <Group position="left" mt="md">
                             <Button type="submit">Submit</Button>
                         </Group>
-                        {loading && <p className="loading">waiting for response...</p>}
-                        {formSuccess && <p className="success">Message sent with success</p>}
-                        {formError && <p className="error">Something went wrong.</p>}
+                        {response}
                     </form>
                 </div>
             </Box>

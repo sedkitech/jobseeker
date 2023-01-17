@@ -15,7 +15,7 @@ import { Contact, contactFormAction } from './pages/help/Contact';
 import { NotFound } from './pages/NotFound';
 import { CareersLayout } from './layouts/CareersLayout';
 import { Careers } from './pages/Careers/Careers';
-import { CareersLoader } from './utilities/loaders/CareersLoader';
+import { getCareers } from './utilities/loaders/CareersLoader';
 import { CareerDetails } from './pages/Careers/CareerDetails';
 import { CareerDetailsLoader } from './utilities/loaders/CareerDetailsLoader';
 import { RouteError } from './components/RouteError';
@@ -38,7 +38,7 @@ function App() {
           <Route
             index
             element={<Careers />}
-            loader={CareersLoader}
+            loader={getCareers}
           />
           <Route
             path=':id'
