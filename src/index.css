@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  /* --primary: #bc4123; */
+  /* --secondary: #2b3452; */
+
+  /* Datk mode */
+  --primary: #0077ef;
+  --secondary: #001e3c;
+
+  --tertiary: #bbb;
+  --quaternary: #fff;
+  --quinary: #0077ef;
+  --senary: #0a1929;
+  --error: red;
+
+  --bg-darker-blue: rgba(0, 0, 0, 0.2);
+}
+/* Light mode */
+
+.light-mode body {
+  background-color: var(--quaternary);
+}
+.light-mode * {
+  background-color: var(--secondary);
+}
+.light-mode button {
+  color: var(--senary);
+}
+.light-mode .help-layout nav a {
+  border-color: #0077ef;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: var(--secondary);
+}
+* {
+  color: var(--quaternary);
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: #0077ef;
+  cursor: pointer;
+}
+
+/* navbar */
+
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  border-bottom: 3px solid var(--primary);
+}
+header nav a:hover {
+  background: var(--primary);
+}
+
+/* page content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+/* help layout */
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.help-layout nav a {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover {
+  background: var(--primary);
+}
+.help-layout nav a.active {
+  border: 2px solid var(--primary);
+}
+/* faq */
+.faq .question {
+  margin: 20px 0;
+  padding: 5px 20px;
+  background: var(--bg-darker-blue);
+  border-radius: 4px;
+}
+
+/* contact form */
+
+.contact h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+/* form input,
+form label span,
+form textarea {
+  display: block;
+} */
+form input,
+form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+form label span {
+  margin-bottom: 10px;
+}
+
+/* careers list */
+.careers > a {
+  display: block;
+  background: var(--bg-darker-blue);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.careers > a:hover p {
+  color: var(--primary);
+}
+.careers p {
+  margin: 0;
+}
+.careers span {
+  font-size: 0.8em;
+  color: var(--tertiary);
+}
+.contact-form span {
+  font-size: 0.8em;
+  color: var(--tertiary);
+}
+
+.contact-form_main input {
+  margin-bottom: 10px;
+}
+.contact-form_main label {
+  margin-top: 15px;
+}
+/* careers details */
+.career-details {
+  background: var(--bg-darker-blue);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.career-details span {
+  font-size: 0.8em;
+  color: var(--tertiary);
+}
+
+/* breadcrumbs */
+ul.breadcrumb {
+  padding: 0px;
+  /* margin: 20px 0px; */
+  margin: 0px 0px 30px 0px;
+  list-style: none;
+  display: flex;
+}
+
+/* ul.breadcrumb li + li:before {
+  padding: 8px;
+  content: ">";
+  color: var(--tertiary);
+} */
+
+ul.breadcrumb li::after {
+  padding: 8px;
+  content: ">";
+  color: var(--tertiary);
+}
+
+ul.breadcrumb li:last-child::after {
+  content: "";
+}
+ul.breadcrumb li::first-letter {
+  text-transform: capitalize;
+}
+
+ul.breadcrumb li a {
+  color: var(--tertiary);
+  text-decoration: none;
+  background: var(--bg-darker-blue);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+ul.breadcrumb li a.active {
+  color: var(--tertiary);
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+ul.breadcrumb li:last-child a.active {
+  color: #eee;
+  text-decoration: none;
+}
+
+.error {
+  color: var(--error);
+  margin-top: 10px;
+}
+.success {
+  color: green;
+  margin-top: 10px;
+}
+.loading {
+  margin-top: 10px;
+}
+
+.contact-form input {
+  margin-bottom: 15px;
+}
+.contact-form textarea {
+  margin-bottom: 15px;
+}
+.contact-form button {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+/* matine form  */
+
+.mantine-ittua2 {
+  color: var(--quaternary);
+}
