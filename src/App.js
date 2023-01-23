@@ -19,10 +19,12 @@ import { getCareers } from './utilities/loaders/CareersLoader';
 import { CareerDetails } from './pages/Careers/CareerDetails';
 import { CareerDetailsLoader } from './utilities/loaders/CareerDetailsLoader';
 import { RouteError } from './components/RouteError';
-
+import { careersLoader } from './utilities/loaders/CareersLoader';
+import { QueryClient } from 'react-query'
 
 function App() {
 
+  const queryClient = new QueryClient()
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />}>
@@ -38,8 +40,10 @@ function App() {
           <Route
             index
             element={<Careers />}
-            loader={getCareers}
+            // loader={getCareers}
+            loader={careersLoader(queryClient)}
           />
+
           <Route
             path=':id'
             element={<CareerDetails />}

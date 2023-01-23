@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import { AddCareer } from '../pages/Careers/AddCareer'
 
 export const CareersLayout = () => {
   return (
